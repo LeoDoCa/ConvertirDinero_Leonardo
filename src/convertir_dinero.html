@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertir Dinero</title>
+</head>
+<body>
+    <h1>Presiona el boton de la opción de lo que deseas hacer</h1>
+    <button onclick="peso_dolar()">Convertir de pesos mexicanos a dólares</button>
+    <button onclick="peso_euro()">Convertir de pesos mexicanos a euros</button>
+    <button onclick="dolar_peso()">Convertir de dólares a pesos mexicanos</button>
+    <button onclick="euro_peso()">Convertir de euros a pesos mexicanos</button>
+    <br>
+    <br>
+    Escribe la cantidad que deseas convertir:    <input id="dinero" type="number" placeholder="100">
+    <br>
+    <br>
+    <p id="resultado"></p>
+    <script>
+        function peso_dolar() {
+            const dinero = parseFloat(document.getElementById('dinero').value);
+            if (!isNaN(dinero)) {
+                const res = dinero / 17.5; 
+                document.getElementById('resultado').textContent = "Resultado: $" + res.toFixed(2) + " USD";
+            } else {
+                document.getElementById('resultado').textContent = "Por favor ingresa una cantidad válida.";
+            }
+        }
+
+        function peso_euro() {
+            const dinero = parseFloat(document.getElementById('dinero').value);
+            if (!isNaN(dinero)) {
+                const res = dinero / 19; 
+                document.getElementById('resultado').textContent = "Resultado: €" + res.toFixed(2) + " EUR";
+            } else {
+                document.getElementById('resultado').textContent = "Por favor ingresa una cantidad válida.";
+            }
+        }
+
+        function dolar_peso() {
+            const dinero = parseFloat(document.getElementById('dinero').value);
+            if (!isNaN(dinero)) {
+                const res = dinero * 17.5; 
+                document.getElementById('resultado').textContent = "Resultado: $" + res.toFixed(2) + " MXN";
+            } else {
+                document.getElementById('resultado').textContent = "Por favor ingresa una cantidad válida.";
+            }
+        }
+
+        function euro_peso() {
+            const dinero = parseFloat(document.getElementById('dinero').value);
+            if (!isNaN(dinero)) {
+                const res = dinero * 19; 
+                document.getElementById('resultado').textContent = "Resultado: $" + res.toFixed(2) + " MXN";
+            } else {
+                document.getElementById('resultado').textContent = "Por favor ingresa una cantidad válida.";
+            }
+        }
+    </script>
+</body>
+</html>

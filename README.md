@@ -11,4 +11,5 @@ Clonar el repositorio de GitHub desde el Git Bash utilizando el comando:
 ```bash
   git clone https://github.com/LeoDoCa/ConvertirDinero_Leonardo.git
 ```
+Ir a la carpeta que se creo despues de clonar el repositorio
   Ejecutar el archivo HTML, o ejecutar el proyecto con alguna libreria de Visual Studio como "Live Server"
